@@ -15,7 +15,7 @@ class CapitalizeWordsTextCommand extends CapitalizeTextCommand {
         return Arrays.stream(text.split("\\s+"))
                         .map(word -> {
                             if (word.isEmpty()) return word;
-                            return String.format("%s %s",
+                            return String.format("%s%s",
                                     word.substring(0, 1).toUpperCase(),
                                     word.substring(1).toLowerCase()
                             );

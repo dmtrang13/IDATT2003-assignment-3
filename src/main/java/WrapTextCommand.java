@@ -50,7 +50,7 @@ class WrapSelectionTextCommand extends WrapTextCommand {
 
     @Override
     public String execute(String text) {
-        if (selection == null || selection.isEmpty()) {
+        if (selection == null || selection.isEmpty() || text == null || text.isEmpty()) {
             return text;
         }
         return text.replace(selection, opening + selection + end);
